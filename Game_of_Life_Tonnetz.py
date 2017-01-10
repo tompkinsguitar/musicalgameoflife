@@ -32,7 +32,7 @@ def musicLife(x):
     p1 = stream.Part(id='Melody')
     p2 = stream.Part(id='Chords')
     p1.append(melodyStream)
-    p1.insert(instrument.Soprano()) #melody instrument
+    p1.insert(instrument.Piano()) #melody instrument
     p2.append(myStream)
     p2.insert(instrument.Vocalist()) #chord instrument
     # s.insert(0, p1) #uncomment if melody wanted
@@ -46,11 +46,13 @@ def musicGame(world):
     midiNotes = []
     chordNotes = []
     melody = []
+    """pitches are represented as MIDI values; (0,0) = 60 = middle C"""
     for (x, y) in world: #converts the coordinates to a Tonnetz (0, 0) is midi-60
         n = (x*3 + y*4 + 60)  #continuous space
         n2 = ((x*3%12)+(y*4%12)+60)  #modular space
         n3 = (x*5 + y*7 +60) #fifth-based space
         n4 = (x*7 + y*4 + 60) #rotation of n
+        """try out different spaces by changing from n, n2, n3, etc."""
         midiNotes.append(n4)
         melody.append(note.Note(n4))
         chordNotes.append(note.Note(n4))
