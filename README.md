@@ -10,6 +10,8 @@ Conway's Game of Life is an experiment of cellular autonomation: https://en.wiki
 
 This script places musical notes on each point of the coordinate plane. All living cells will be played as their respective musical notes. Each generation lasts for one measure. You can choose to have each generation be a chord, or a melody, or both, and you can change the instrument given. If you choose melody, the speed of the melody depends on the number of generation, which often creates complex and interesting rhythms. 
 
+An audio example (melody only) can be found at https://soundcloud.com/danieltompkins/200-generations
+
 If you have any questions or suggestions, please feel free to email me: tompkinsguitar@gmail.com
 
 Enjoy!
